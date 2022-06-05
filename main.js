@@ -29,15 +29,12 @@ const strToIntArr = (strArr) => {
 const sumArr = (arr) => {
   return strToIntArr(arr).reduce((acc, curr) => acc + curr).toFixed(2)
 }
-const imgToTxt = (img) => {
+const imgToTxt = async (img) => {
   try {
-    ReadText(img).then(text => {
-      const arr = text.split('\n')
-      alert(sumArr(arr))
-      location.reload()
-    }).catch(err => {
-      throw err
-    })
+    const text = await ReadText(img)
+    const textArr = text.split('\n')
+    alert(`El total de la suma es: ${sumArr(textArr)}`)
+    location.reload()
   } catch (error) {
     alert('No se pudo leer el archivo')
   }

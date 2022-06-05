@@ -52,3 +52,13 @@ form{
   transform: translate(-50%, 0);
   padding: 15px;
 }
+.procesar{
+  cursor: pointer;
+  background-color: var(--text-color);
+  width: 5vw;
+}
+.procesar:hover{
+  background-color: var(--bg-color);
+  transform: scale(1.1);
+  animation: scale 0.1s step-end;
+}
