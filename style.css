@@ -55,10 +55,6 @@ form{
 .procesar{
   cursor: pointer;
   background-color: var(--text-color);
-  width: 5vw;
-  position: absolute;
-  top: 15vh;
-  left: 1%;
 
 }
 .procesar:hover{
